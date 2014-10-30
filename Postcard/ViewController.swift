@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessagePressed(sender: UIButton) {
-        
+        //when sendMessage Button is pressed:
         messageLabel.text = messageText.text
         messageText.text = nil
         messageLabel.hidden = false
