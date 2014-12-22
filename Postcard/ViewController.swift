@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var receiverLabel: UILabel!
     
-    @IBOutlet weak var receiver: UITextField!
+    @IBOutlet weak var receiverText: UITextField!
     @IBOutlet weak var messageText: UITextField!
     
     
@@ -28,24 +28,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessagePressed(sender: UIButton) {
+        
         //when sendMessage Button is pressed:
         
-        
+        //Assign the text from text box to label:
         messageLabel.text = messageText.text
-        nameLabel.text = receiver.text
+        receiverLabel.text = receiverText.text
         
-       messageText.text = nil
-       receiver.text = nil
+        //Now remove the added text:
+        messageText.text = nil
+        receiverText.text = nil
         
+        //Unhide the labels:
         messageLabel.hidden = false
-        nameLabel.hidden = false
+        receiverLabel.hidden = false
         
-        nameLabel.textColor = UIColor.blueColor()
+        //change the text colors just for fun:
+        receiverLabel.textColor = UIColor.blueColor()
         messageLabel.textColor = UIColor.redColor()
+        
+        //highlight by changing the color of the button it is pressed
         //sender.backgroundColor = UIColor.blueColor()
        
-        
+        //closing the key board.
         //messageText.resignFirstResponder()
+        
+        //change the title of the send button
         sender.setTitle("Message Sent", forState: UIControlState.Normal)
     }
 
