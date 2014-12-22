@@ -26,10 +26,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //when sendMessage Button is pressed:
     @IBAction func sendMessagePressed(sender: UIButton) {
-        
-        //when sendMessage Button is pressed:
         
         //Assign the text from text box to label:
         messageLabel.text = messageText.text
@@ -43,17 +42,17 @@ class ViewController: UIViewController {
         messageLabel.hidden = false
         receiverLabel.hidden = false
         
-        //change the text colors just for fun:
+        //Change the text colors just for fun:
         receiverLabel.textColor = UIColor.blueColor()
         messageLabel.textColor = UIColor.redColor()
         
-        //highlight by changing the color of the button it is pressed
+        //Highlight by changing the color of the button that it is pressed:
         //sender.backgroundColor = UIColor.blueColor()
        
-        //closing the key board.
+        //Closing the key board:
         //messageText.resignFirstResponder()
         
-        //change the title of the send button
+        //Change the title of the send button:
         sender.setTitle("Message Sent", forState: UIControlState.Normal)
     }
 
