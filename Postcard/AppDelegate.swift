@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Postcard
 //
-//  Created by WPP Administrator on 10/28/14.
+//  Created by Arun Bernard on 10/28/14.
 //  Copyright (c) 2014 Bitfountain. All rights reserved.
 //
 
